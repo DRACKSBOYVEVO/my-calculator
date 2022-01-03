@@ -1,45 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    .label {
-      color: white;
-      padding: 8px;
-      font-family: Arial;
-      font-weight: bold;
-      padding-left: 15px;
-    }
-
-    input{
-      text-decoration: none;
-      padding: 3px;
-      color: black;
-      font-weight: bold;
-      font-size: medium;
-      
-    }
-
-    .success {background-color: #04AA6D;} /* Green */
-    .info {background-color: #2196F3;} /* Blue */ 
-    </style>
-</head>
-<body>
-  <h1>Aplicación: {{ title }}</h1>
-
+<h1>{{ title }}</h1>
   <form action="">
-    <label for="fname">Número 1:</label><br>
-    <input type="text" [(ngModel)] = "Numero_1" name = "Numero1"><br> //Banana in box
-    <label for="lname">Número 2:</label><br>
-    <input type="text" [(ngModel)] = "Numero_2" name = "Numero2"><br><br>
-    <input type="submit" value="Submit" onclick="Sumar()">
-    <input type="reset">
+    <label style="font-weight: 500; font-family: 'Roboto', sans-serif;">Número 1:</label>
+    <input class="btn-input" type="number" [(ngModel)]="Numero_1" name = "numero_1"><br> <!--Banana in box [(ngModel)]-->
+    <label style="font-weight: 500; font-family: 'Roboto', sans-serif;">Número 2:</label>
+    <input class="btn-input" type="number" [(ngModel)]="Numero_2" name = "numero_2"><br><br>
+    <input class="btn-button" type="submit" value="Sumar" (click)="Sumar()">
+    <input class="btn-button" type="submit" value="Restar" (click)="Restar()"><br>
+    <input class="btn-button" type="submit" value="Multiplicar" (click)="Multiplicacion()">
+    <input class="btn-button" type="submit" value="Dividir" (click)="Division()"><br>
+    <input class="btn-button" type="reset">
   </form>
   <h4>Resultado = {{ Resultado }}</h4>
-</body>
-</html>
 
 

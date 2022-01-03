@@ -16,4 +16,13 @@ export class AppComponent {
   Sumar():void{
     this.Resultado = this.Numero_1 + this.Numero_2;
   }
+  Restar():void{
+    this.Resultado = this.Numero_1 - this.Numero_2;
+  }
+  Multiplicacion():void{
+    this.Resultado = this.Numero_1 * this.Numero_2;
+  }
+  Division():void{
+    this.Resultado = this.Numero_1 / this.Numero_2;
+  }
 }
